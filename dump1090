@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ x"$1" = x"sh" ]; then
+  exec $@
+  exit
+fi
+
+cd /usr/local/dump1090
+exec /usr/local/dump1090/dump1090 $@
