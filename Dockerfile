@@ -4,7 +4,7 @@ MAINTAINER Evgeniy Slizevich <evgeniy@slizevich.net>
 WORKDIR /
 
 RUN apt-get update && \
-    apt-get install -y git gcc make librtlsdr-dev pkg-config libusb-1.0-0-dev && \
+    apt-get install -y git gcc make librtlsdr-dev pkg-config libusb-1.0-0-dev librtlsdr0 && \
     git clone https://github.com/mutability/dump1090.git /tmp/src && \
     cd /tmp/src && \
     make && \
