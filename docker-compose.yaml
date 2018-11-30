@@ -1,0 +1,20 @@
+version: '3'
+services:
+ app:
+  build: ./app
+  volumes:
+   - ./data:/data
+  devices:
+   - /dev/bus/usb
+  command: --quiet --metric --write-json /data
+ web:
+  build: ./web
+  volumes:
+   - ./data:/data:ro
+  ports:
+   - 8123:80
+#  labels:
+#   traefik.frontend.rule: "Host:dump1090.mydomain"
+#   traefik.port: "80"
+#   traefik.protocol: "http"
+#   traefik.enable: "true"

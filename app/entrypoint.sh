@@ -5,5 +5,4 @@ if [ x"$1" = x"sh" -o x"$1" = x"bash" ]; then
   exit
 fi
 
-cd /usr/local/dump1090
-exec /usr/local/dump1090/dump1090 $@
+exec /app/dump1090 $@
