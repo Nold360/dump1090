@@ -3,6 +3,9 @@ Simple dump1090 based application stack including nginx webserver.
 
 Based on https://github.com/ffaxl/dump1090
 
+## Running without Building
+Just uncomment the "image: nold360/..." lines and comment out the "build: ..." lines in docker-compose.yaml
+
 ## Building
 `docker-compose build`
 
