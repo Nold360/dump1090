@@ -1,6 +1,7 @@
 version: '3'
 services:
  app:
+#  image: nold360/dump1090
   build: ./app
   volumes:
    - ./data:/data
@@ -8,6 +9,7 @@ services:
    - /dev/bus/usb
   command: --quiet --metric --write-json /data
  web:
+#  image: nold360/dump1090_web
   build: ./web
   volumes:
    - ./data:/data:ro
